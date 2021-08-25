@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone book</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <meta name="author" content="Iida Peltonen">
+
+</head>
+
+<body>
+    <main>
+        <h1>PHONE BOOK</h1>
+        <hr>
+        <!--kolme lomaketta vierekkäin-->
+        <div class="insert">
+            <h2>Insert/Update</h2>
+            <hr>
+            <input type="hidden" id="index">
+            <label for="lastname">Last name:</label><br>
+            <input type="text" id="lastname" name="lastname" size="20"><br><br>
+            <label for="firstname">First name:</label><br>
+            <input type="tel" id="firstname" name="firstname" size="20"><br><br>
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone" name="phone" size="20"><br><br>
+            <label for="birthyear">Birth year:</label><br>
+            <input type="year" id="birthyear" name="birthyear" size="4"><br><br>
+            <button type="button" onclick="save()">Save</button><br><br>
+            <button type="button" onclick="startData()">Start data</button><br><br>
+            <button type="button" onclick="cancel()">Cancel</button><br><br>
+        </div>
+
+        <div class="all">
+            <h2>All friends</h2>
+            <hr>
+            <label class="output" id="kaikkiIhmiset"></label>
+            <p id="total"></p>
+        </div>
+
+        <div class="yksi">
+            <h2>One friend</h2>
+            <hr>
+            <p id="yksihlo" class="one">
+                <!--<button onclick="remove">Remove</button><br><br>
+                <button onclick="edit">Edit</button><br><br>-->
+            </p>
+        </div>
+
+    </main>
+    <script src="js/phonebook.js"></script>
+</body>
+
+</html>
